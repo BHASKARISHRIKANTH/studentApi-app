@@ -1,0 +1,25 @@
+<a routerLink="addStudent">Create New Record</a>
+<table border="1">
+  <tr>
+    <th>RollNo</th>
+    <th>Name</th>
+    <th>Age</th>
+    <th>Email</th>
+    <th>Date</th>
+    <th>Gender</th>
+    
+    <th>Delete</th>
+    <th>Update</th>
+  </tr>
+  <tr *ngFor="let student of studentData">
+    <td>{{student.rollNo}}</td>
+    <td>{{student.name}}</td>
+    <td>{{student.age}}</td>
+    <td>{{student.email}}</td>
+    <td>{{student.date}}</td>
+    <td>{{student.isMale?"Male":"Female"}}</td>
+    
+    <td><button (click)="deleteStudent(student.id)">Delete</button></td>
+    <td><button (click)="updateStudent(student.id)">Update</button></td>
+  </tr>
+</table>

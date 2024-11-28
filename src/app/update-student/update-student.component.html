@@ -1,0 +1,20 @@
+<html>
+    <head></head>
+    <body>
+        <form [formGroup]="oldStudentForm" (ngSubmit)="updateStudent()">
+            <input type="number" formControlName="rollNo" placeholder="Enter Roll No">
+            
+            <label for="floationgInput">Roll No</label>
+            <input type="text" formControlName="name" placeholder="Enter Name">
+            <label for="floationgInput">Name</label>
+            <input type="number" formControlName="age" placeholder="Enter Age">
+            <label for="floationgInput">Age</label>
+            <input type="text" formControlName="email" placeholder="Enter Email">
+            <label for="floationgInput">Email</label>
+            <input type="date" formControlName="date" placeholder="Enter Date">
+            <label for="floationgInput">Date</label>
+            <label class="form-check-label">IsMale</label>
+            <button>Add</button>
+        </form>
+    </body>
+</html>

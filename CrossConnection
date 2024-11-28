@@ -1,0 +1,13 @@
+const express = require('express');
+const cors = require('cors');
+const app = express();
+
+app.use(cors());
+
+app.get('/api/v1/techlabs/test/students', (req, res) => {
+  res.json({ message: 'This is a CORS-enabled response' });
+});
+
+app.listen(3000, () => {
+  console.log('Server is running on port 3000');
+});
